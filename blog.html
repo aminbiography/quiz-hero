@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Quiz Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js" defer></script>
+
+    <!-- You don't need to change noChange.js file. It's fine -->
+    <script src="./noChange.js" defer></script>
+    <!-- You don't need to change noChange.js file. It's fine -->
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              common: ["Rubik", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white font-common">
+    <!-- Header/Navbar section start -->
+    <header class="h-16 flex items-center shadow-sm">
+      <nav class="flex justify-between items-center w-9/12 mx-auto">
+        <div class="text-zinc-800 font-bold uppercase">
+          <h1 class="text-lg">Quiz <span class="text-green-700">HERO</span></h1>
+          <p class="text-[10px] font-normal capitalize -mt-1">
+            Get ready to Quiz and be amazed!
+          </p>
+        </div>
+        <button id="blog-btn"
+          class="bg-green-600 font-light text-sm px-5 py-1 rounded text-white"
+        >
+          Home
+        </button>
+      </nav>
+    </header>
+    <!-- Header/Navbar section end -->
+
+    <!-- Landing page content start -->
+    <section
+      class="lg:w-9/12 md:w-[90%] w-[95%] mx-auto text-center"
+      id="rulesContainer"
+    >
+      <h1 class="text-center my-8 text-xl">Welcome to Quiz Hero Blogs</h1>
+      <div class="lg:w-[80%] md:w-[90%] w-[90%] mx-auto text-left">
+        
+        <!-- Blogss start -->
+        <ul class="text-sm my-10">
+          <li class="my-4">
+            <span class="bg-orange-200 px-2 rounded">Question 1:</span> Question 1: What is the difference in terms of map, filter, foreach and find in JavaScript?</span>
+          </li>
+          <li class="my-4">
+            <span class="bg-green-200 px-2 rounded">Answer Q.1:</span><br> 
+            <b>map:</b> It creates a new array with the results of calling a provided function on every element in the array.<br>
+            Such as:<br>
+            const numbers = [1, 2, 3, 4, 5];<br>
+            const doubledNumbers = numbers.map(number => number * 2);<br>
+            console.log(doubledNumbers);<br> 
+            // Output: [2, 4, 6, 8, 10]<br>
+            <br>
+            <b>filter:</b> It creates a new array with all elements that pass the test implemented by the provided function.<br>
+            Such as:<br>
+            const numbers = [1, 2, 3, 4, 5];<br>
+            const evenNumbers = numbers.filter(number => number % 2 === 0);<br>
+            console.log(evenNumbers);<br> 
+            // Output: [2, 4]<br>
+            <br>
+            <b>forEach:</b> It executes a provided function once for each element in an array.<br>
+            Such as:<br>
+            const numbers = [1, 2, 3, 4, 5];<br>
+            numbers.forEach(number => console.log(number));<br>
+            // Output:<br>
+            // 1<br>
+            // 2<br>
+            // 3<br>
+            // 4<br>
+            // 5<br>
+            <br>
+            <b>find:</b> It returns the first element in an array that satisfies a provided testing function.<br>
+            Such as:<br>
+            const numbers = [1, 3, 5, 2, 4, 6];<br>
+            const firstEvenNumber = numbers.find(number => number % 2 === 0);<br>
+            console.log(firstEvenNumber);<br>
+            // Output: 2<br>
+            </span>
+          </li>
+          <li class="my-4">
+            <span class="bg-orange-200 px-2 rounded">Question 2:</span> What is the difference in terms of local storage session storage and cookies in JavaScript? 
+          </li>
+          <li class="my-4">
+            <span class="bg-green-200 px-2 rounded">Answer Q.2:</span><br>
+            Local storage and session storage store data on the client side and have different lifetimes, while cookies can be used for server-side data management and have expiration dates.<br>
+            For example, local storage can be used to persist data across browser sessions, session storage can be used to store data for a specific session, and cookies can be used to store user preferences or login information.
+          </span>
+        </li> 
+          <li class="my-4">
+            <span class="bg-orange-200 px-2 rounded">Question 3:</span> What is an event loop in javascript and how does it work?
+          </li>
+          <li class="my-4">
+            <span class="bg-green-200 px-2 rounded">Answer Q.3:</span><br>
+            The event loop is a key part of the JavaScript runtime environment that allows for the handling of asynchronous events. It constantly checks if there are any pending tasks in the task queue and executes them when the call stack is empty. This allows for non-blocking operations to be performed efficiently, preventing the browser from freezing.<br>
+            For example, when using the setTimeout function, the event loop adds the task to the task queue with a delay specified by the function, and when the delay is up, the function is added to the call stack and executed. The event loop then repeats this process, checking for new tasks in the task queue and executing them when the call stack is empty.
+          </span>
+        </li> 
+          <li class="my-4">
+            <span class="bg-orange-200 px-2 rounded">Question 4:</span>The quizTimer Function: how does it work?
+          </li>
+          <li class="my-4">
+            <span class="bg-green-200 px-2 rounded">Answer Q.4:</span><br>
+            The quizTimer function starts a setInterval loop that executes every second. Inside the loop, it calculates the elapsed time in minutes and seconds, formats the display with leading zeros, and updates an HTML element with the timer value. After every 60 seconds, it creates a flashing effect by changing the text color of the timer. The function can be dismissed by passing a parameter that clears the setInterval loop. This function is useful for creating timed quizzes or countdowns where users need to complete a task within a set time limit.
+          </span>
+        </li> 
+          <li class="my-4">
+            <span class="bg-orange-200 px-2 rounded">Question 5:</span>The chooseQuiz Function: how does it work?
+          </li>
+          <li class="my-4">
+            <span class="bg-green-200 px-2 rounded">Answer Q.5:</span><br>
+            The chooseQuiz Function updates the answers array with the chosen quiz and given answer. If an existing answer with the same quiz id is found, it updates the answer with the given answer. Otherwise, it adds a new answer object to the answers array. Finally, it updates the user interface with the current answers array.
+          </span>
+        </li> 
+        </ul>
+      </div>
+    </section>
+    <!-- Blogss end -->
+
+    <!-- Footer section start -->
+    <footer class="py-10 text-center text-sm">
+      Copyright © 2023 Quiz Hero All Rights Reserved.
+    </footer>
+    <!-- Footer section end -->
+
+    <!-- Home page link  -->
+    <script>
+      document.getElementById('blog-btn').addEventListener('click', function(){
+            window.location.href = "index.html"})
+    </script>
+  </body>
+</html>
